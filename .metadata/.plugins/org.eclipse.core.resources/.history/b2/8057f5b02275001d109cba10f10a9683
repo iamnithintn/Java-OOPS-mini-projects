@@ -1,0 +1,20 @@
+package jspiders;
+
+import java.util.Scanner;
+
+
+
+public class Solution {
+	
+	static Scanner s = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		int choice = s.nextInt();
+		
+		switch(choice) {
+		case 1: 
+		}
+
+	}
+}

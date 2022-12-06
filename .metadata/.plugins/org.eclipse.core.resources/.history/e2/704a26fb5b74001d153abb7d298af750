@@ -1,0 +1,49 @@
+package com.nithin;
+
+import java.util.Scanner;
+
+public class Solution extends CalculatorImpl{
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+
+		Calculator s1 = new CalculatorImpl();
+		
+		System.out.println("Select 1 for Addition \nSelect 2 forSubtraction \nSelect 3 for Multiplication \nSelect 4 for Division \n");
+		int choice = s.nextInt();
+		
+		
+		System.out.print("Enter 1st number : ");
+		int a = s.nextInt();
+		System.out.print("Enter 2nd number : ");
+		int b = s.nextInt();
+		s.close();
+		
+		
+
+		switch (choice){
+		case 1 : System.out.println(s1.add(a, b));
+		break;
+		case 2: System.out.println(s1.sub(a, b));
+		break;
+		case 3: System.out.println(s1.mul(a, b));
+		break;
+		case 4: System.out.println(s1.div(a, b));
+		break;
+		case 5: 
+		default : System.out.println(s1.displayErrorMessage());
+		}
+
+	                                       //Optimized code
+		
+		
+/*
+ 
+  
+  
+ * */
+
+
+
+	}
+}

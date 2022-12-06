@@ -1,0 +1,15 @@
+package examples;
+
+abstract class Test {
+	abstract void eat();
+	
+	void sleep() {
+		
+	}
+}
+
+class Demp{
+	void sleep() {
+		
+	}
+}

@@ -1,0 +1,47 @@
+package jspiders;
+
+public class BankImpl implements Bank{
+
+	int balance;
+	
+	BankImpl(int balance){
+		this.balance=balance;
+	}
+	
+
+	
+	@Override
+	public void deposit(int amt) {
+		
+		System.out.println("Depositing Rs: "+amt);
+		balance+=amt;
+		try {
+			Thread.sleep(3000);
+		}catch (InterruptedException e) {
+
+			e.printStackTrace();
+		}
+		System.out.println("Sucessfully Deposited");
+		
+	}
+
+	@Override
+	public void withdraw(int amt) {
+		if(balance>amt) {
+		System.out.println("Withdrawring Rs");
+		}
+		
+	}
+
+	@Override
+	public int getBalance() {
+		
+		
+		return balance;
+	}
+
+	@Override
+	public String displayErrorMessage() {
+		return "Invalid Choice";
+	}	
+}

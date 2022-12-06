@@ -1,0 +1,49 @@
+package jspiders;
+
+import java.util.Scanner;
+
+
+
+public class Solution{
+
+	static Scanner s = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		Bank bi = new BankImpl(10000);  //up-casting to hide the implementation
+
+		while (true) {
+			
+			System.out.println("----------------------------------------The J-Bank---------------------------------------------");
+			
+			System.out.println("1:Deposit\n2:Withdraw\n3:Check Balance\n4:Exit");
+			System.out.print("Enter Choice: ");
+			int choice = s.nextInt();
+
+			switch (choice) {
+
+			case 1:
+				System.out.print("Enter the amount to be deposited: ");
+				bi.deposit(s.nextInt());
+				break;
+
+			case 2:
+				System.out.print("Enter the amount to be withdrawn: ");
+				bi.withdraw(s.nextInt());
+				break;
+
+			case 3:
+				System.out.println("Your available balance is " + bi.getBalance());
+				break;
+
+			case 4:
+				System.out.println("Thank you for using our bank!!");
+				System.exit(0);
+
+			default:
+				System.out.println(bi.displayErrorMessage());
+			}
+		}
+
+	}
+}

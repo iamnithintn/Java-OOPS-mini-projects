@@ -1,0 +1,39 @@
+package jspiders;
+
+import java.util.Scanner;
+
+
+
+public class Solution{
+	
+	static Scanner s = new Scanner(System.in);
+	
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println("1:Deposit\n2:Withdraw\n3:Check Balance\n4:Exit");
+		System.out.print("Enter Choice: ");
+		int choice = s.nextInt();
+		
+		
+		int amt = s.nextInt();
+		int balance = s.nextInt();
+		
+		Bank bi = new BankImpl(balance);
+
+		
+		switch(choice) {
+		case 1: bi.deposit(amt);
+		break;
+		case 2: bi.withdraw(amt);
+		break;
+		case 3: System.out.println(bi.getBalance());
+		break;
+		case 4: System.out.println("Thank you for using our bank!!");
+		      System.exit(0);
+		default: System.out.println(bi.displayErrorMessage());
+		}
+
+	}
+}

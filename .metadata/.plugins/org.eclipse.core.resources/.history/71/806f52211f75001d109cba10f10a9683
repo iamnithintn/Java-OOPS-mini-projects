@@ -1,0 +1,37 @@
+package jspiders;
+
+public class BankImpl implements Bank{
+
+	int balance;
+	
+	BankImpl(int balance){
+		this.balance=balance;
+	}
+	
+
+	@Override
+	public void deposit(int amt) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void withdraw(int amt) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getBalance() {
+		// TODO Auto-generated method stub
+		return balance;
+	}
+
+	@Override
+	public String displayErrorMessage() {
+		return "Invalid Choice";
+	}
+	
+	
+	
+}

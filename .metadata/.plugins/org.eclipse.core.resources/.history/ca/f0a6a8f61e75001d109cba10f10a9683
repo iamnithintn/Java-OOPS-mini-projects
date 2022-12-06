@@ -1,0 +1,9 @@
+package jspiders;
+
+public class BankImpl implements Bank{
+
+	int balance;
+	
+	
+	
+}

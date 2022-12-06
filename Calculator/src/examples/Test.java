@@ -1,0 +1,19 @@
+package examples;
+
+abstract class Test {                       //can have both concrete and abstract methods--> abstract keyword
+	
+	
+	
+	abstract void eat();              //abstract method: only declaration no implementation
+	
+	void sleep() {                    //concrete method: both declaration and implementation
+		
+	}
+}
+
+class Demp{                          //only concrete method; declared without abstract keyword
+	
+	void sleep() {                      //concrete method 
+		
+	}
+}
